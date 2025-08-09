@@ -16,41 +16,41 @@ def run_server():
     print("🚀 Starting Finance MCP Server...")
     print("Press Ctrl+C to stop")
     try:
-        subprocess.run([sys.executable, "server.py"])
+        subprocess.run(["uv", "run", "python", "server.py"])
     except KeyboardInterrupt:
         print("\n👋 Server stopped")
 
 def run_client():
     """Run the client test"""
     print("🔧 Running Finance MCP Client Test...")
-    subprocess.run([sys.executable, "client.py"])
+    subprocess.run(["uv", "run", "python", "client.py"])
 
 def run_client_interactive():
     """Run the client in interactive mode"""
     print("🔧 Running Finance MCP Client (Interactive)...")
-    subprocess.run([sys.executable, "client.py", "-i"])
+    subprocess.run(["uv", "run", "python", "client.py", "-i"])
 
 def run_main_app():
     """Run the main application"""
     print("🏦 Starting Finance MCP Application...")
-    subprocess.run([sys.executable, "main.py"])
+    subprocess.run(["uv", "run", "python", "main.py"])
 
 def run_tests():
     """Run integration tests"""
     print("🧪 Running Integration Tests...")
-    subprocess.run([sys.executable, "test_integration.py"])
+    subprocess.run(["uv", "run", "python", "test_integration.py"])
 
 def run_setup():
     """Run setup script"""
     print("⚙️  Running Setup...")
-    subprocess.run([sys.executable, "setup.py"])
+    subprocess.run(["uv", "run", "python", "setup.py"])
 
 def run_example(example_name):
     """Run an example script"""
     example_path = f"examples/{example_name}.py"
     if os.path.exists(example_path):
         print(f"📝 Running example: {example_name}")
-        subprocess.run([sys.executable, example_path])
+        subprocess.run(["uv", "run", "python", example_path])
     else:
         print(f"❌ Example not found: {example_path}")
         print("Available examples:")
@@ -62,7 +62,7 @@ def run_example(example_name):
 def quick_analysis(symbol, analysis_type):
     """Run quick analysis"""
     print(f"📊 Quick {analysis_type} analysis for {symbol}...")
-    subprocess.run([sys.executable, "main.py", "--symbol", symbol, "--analysis", analysis_type])
+    subprocess.run(["uv", "run", "python", "main.py", "--symbol", symbol, "--analysis", analysis_type])
 
 def show_status():
     """Show system status"""
@@ -102,12 +102,12 @@ def main():
                                    formatter_class=argparse.RawDescriptionHelpFormatter,
                                    epilog="""
 Examples:
-  python run.py server              # Start MCP server
-  python run.py client              # Test client
-  python run.py app                 # Run main application
-  python run.py test                # Run tests
-  python run.py quick AAPL price    # Quick price check
-  python run.py example basic_usage # Run example
+  uv run python run.py server              # Start MCP server
+  uv run python run.py client              # Test client
+  uv run python run.py app                 # Run main application
+  uv run python run.py test                # Run tests
+  uv run python run.py quick AAPL price    # Quick price check
+  uv run python run.py example basic_usage # Run example
 """)
     
     parser.add_argument("command", choices=[
@@ -138,13 +138,13 @@ Examples:
             symbol, analysis_type = args.args[0], args.args[1]
             quick_analysis(symbol, analysis_type)
         else:
-            print("Usage: python run.py quick <symbol> <analysis_type>")
+            print("Usage: uv run python run.py quick <symbol> <analysis_type>")
             print("Analysis types: price, volatility, trend, risk")
     elif args.command == "example":
         if len(args.args) >= 1:
             run_example(args.args[0])
         else:
-            print("Usage: python run.py example <example_name>")
+            print("Usage: uv run python run.py example <example_name>")
             run_example("")  # This will show available examples
 
 if __name__ == "__main__":
