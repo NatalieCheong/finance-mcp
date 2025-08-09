@@ -1,1 +1,133 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
+[project]
+name = "finance-mcp"
+version = "1.0.0"
+description = "Comprehensive Finance Analysis using Model Context Protocol (MCP)"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+
+dependencies = [
+    "mcp>=1.0.0",
+    "fastmcp>=0.4.0",
+    "yfinance>=0.2.18",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "asyncio-compat>=0.1.0",
+    "python-dateutil>=2.8.0",
+    "requests>=2.28.0",
+    "urllib3>=1.26.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0"
+]
+
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "httpx>=0.24.0"
+]
+
+docs = [
+    "mkdocs>=1.4.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocstrings>=0.20.0"
+]
+
+[project.scripts]
+finance-mcp-server = "server:main"
+finance-mcp-client = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/finance-mcp"
+Repository = "https://github.com/yourusername/finance-mcp.git"
+Documentation = "https://yourusername.github.io/finance-mcp"
+"Bug Tracker" = "https://github.com/yourusername/finance-mcp/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finance_mcp"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = [
+    "tests",
+]
+python_files = [
+    "test_*.py",
+    "*_test.py"
+]
+python_classes = [
+    "Test*"
+]
+python_functions = [
+    "test_*"
+]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["src/finance_mcp"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:"
+]
