@@ -1,1 +1,28 @@
-
+{
+  "mcpServers": {
+    "finance-server": {
+      "command": "uv",
+      "args": [
+        "run",
+        "python",
+        "server.py"
+      ],
+      "cwd": "/path/to/your/finance-mcp-project",
+      "env": {
+        "PYTHONPATH": "/path/to/your/finance-mcp-project",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  },
+  "allowedMCPServers": [
+    "finance-server"
+  ],
+  "mcpSettings": {
+    "finance-server": {
+      "enabled": true,
+      "timeout": 30000,
+      "maxRetries": 3,
+      "retryDelay": 1000
+    }
+  }
+}
