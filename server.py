@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Finance MCP Server
 A comprehensive financial analysis server using MCP (Model Context Protocol)
@@ -736,17 +735,14 @@ async def search_stocks(
         logger.error(f"Error searching stocks: {str(e)}")
         return {"error": str(e)}
 
-async def main():
-    """Main entry point for the MCP server"""
+if __name__ == "__main__":
     try:
-        # Run the FastMCP server
-        await mcp.run()
+        logger.info("Starting Finance MCP Server...")
+        logger.info("Press Ctrl+C to stop")
+        mcp.run()  # ✅ Direct FastMCP run
     except KeyboardInterrupt:
         logger.info("Server stopped by user")
     except Exception as e:
         logger.error(f"Server error: {str(e)}")
         logger.error(traceback.format_exc())
         sys.exit(1)
-
-if __name__ == "__main__":
-    asyncio.run(main())
