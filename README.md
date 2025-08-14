@@ -23,7 +23,8 @@ Here's what the system delivers through Claude Desktop:
 - **Apple (AAPL)**: 5.73% return but highest volatility
 
 ### ⚠️ Advanced Risk Analysis 
-**Tesla (TSLA) Volatility Metrics**
+![Tesla Volatility Analysis](./images/tesla-volatility.png)
+_ **Tesla (TSLA) Volatility Metrics**
 - **Annual Volatility**: 71.87% (Very high)
 - **30-day Trend**: Decreasing volatility
 - **Max Daily Swing**: +29.69% / -18.43%
