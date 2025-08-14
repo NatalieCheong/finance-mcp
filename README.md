@@ -9,6 +9,7 @@ A comprehensive financial analysis system built using the Model Context Protocol
 Here's what the system delivers through Claude Desktop:
 
 ### 📈 Real-Time Stock Analysis
+![AAPL Stock Price Analysis](./images/aapl-stock-price.png)
 - **AAPL Current Price**: $233.33 (+$3.68, +1.6%)
 - **Volume**: 69.6 million shares
 - **52-Week Range**: $201.27 - $234.99
