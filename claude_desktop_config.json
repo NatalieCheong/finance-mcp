@@ -1,14 +1,9 @@
 {
   "mcpServers": {
     "finance-server": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "path/your path/finance-mcp",
-        "run",
-        "python",
-        "server.py"
-      ]
+      "command": "/Users/username/Downloads/finance-mcp/.venv/bin/python",
+      "args": ["/Users/username/Downloads/finance-mcp/server.py"],
+      "cwd": "/Users/username/Downloads/finance-mcp"
     }
   }
 }
