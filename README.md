@@ -16,6 +16,7 @@ Here's what the system delivers through Claude Desktop:
 - **Real-time data** directly from yfinance
 
 ### 📊 Multi-Stock Comparison
+![Stock Comparison](./images/stock-comparison.png)
 **AAPL vs MSFT vs GOOGL (1-Year Performance)**
 - **Google (GOOGL)**: 26.54% return - **Best performer** 🏆
 - **Microsoft (MSFT)**: 25.84% return with lowest volatility
