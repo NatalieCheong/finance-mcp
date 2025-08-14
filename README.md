@@ -30,6 +30,15 @@ Here's what the system delivers through Claude Desktop:
 - **Max Daily Swing**: +29.69% / -18.43%
 - **Risk Rating**: Extremely volatile stock
 
+### 📈 Trend Analysis
+![NVIDIA Trend Analysis](./images/NVIDIA-trend-analysis.png)
+- **NVIDIA (NVDA) Trend Analysis**
+- **Current Price**: $181.59
+- **Overall Trend**: Bullish 📈
+- **30-day Volatility**: 47.35%
+- **60-day Volatility**: 57.54%
+- **Trend: Decreasing** - Volatility has been coming down recently
+
 ## ✨ Key Features
 
 ### 🔧 **9 Professional Financial Tools**
