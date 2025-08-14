@@ -277,5 +277,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Ready to analyze the markets? Start with:** `"Get me the current price and risk analysis for Tesla"`
 
-🏦 **Finance MCP** - Professional financial analysis powered by AI
+🏦 **Finance MCP** - Professional financial analysis.
   "
