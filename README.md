@@ -24,7 +24,7 @@ Here's what the system delivers through Claude Desktop:
 
 ### ⚠️ Advanced Risk Analysis 
 ![Tesla Volatility Analysis](./images/tesla-volatility.png)
-_ **Tesla (TSLA) Volatility Metrics**
+- **Tesla (TSLA) Volatility Metrics**
 - **Annual Volatility**: 71.87% (Very high)
 - **30-day Trend**: Decreasing volatility
 - **Max Daily Swing**: +29.69% / -18.43%
@@ -59,7 +59,7 @@ _ **Tesla (TSLA) Volatility Metrics**
 ### 1-Minute Setup
 ```bash
 # Clone and install
-git clone https://github.com/yourusername/finance-mcp.git
+git clone https://github.com/NatalieCheong/finance-mcp.git
 cd finance-mcp
 uv sync
 
@@ -119,7 +119,8 @@ finance-mcp/
 ├── examples/                # Usage examples
 │   ├── basic_usage.py
 │   └── portfolio_analysis.py
-└── standalone_app.py        # Standalone version (no MCP needed)
+└── standalone_app.py # Standalone version (no MCP needed)
+└── simple_client.py
 ```
 
 ## 💼 Professional Financial Calculations
@@ -257,9 +258,10 @@ uv run python run.py status
 ```
 
 ### Getting Help
-- **Issues**: [GitHub Issues](https://github.com/yourusername/finance-mcp/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/finance-mcp/discussions)
+- **Issues**: [GitHub Issues](https://github.com/NatalieCheong/finance-mcp/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/NatalieCheong/finance-mcp/discussions)
 - **Documentation**: [MCP Documentation](https://modelcontextprotocol.io/)
+- **GitHub**: [MCP GitHub](https://github.com/modelcontextprotocol)
 
 ## 📄 License
 
