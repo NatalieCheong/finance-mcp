@@ -284,12 +284,3 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - **[uv](https://github.com/astral-sh/uv)** - Modern Python package management
 
 ---
-
-## 🎯 Live Results
-
-*Screenshots above show real Claude Desktop integration with live financial data - no mock data or simulations!*
-
-**Ready to analyze the markets? Start with:** `"Get me the current price and risk analysis for Tesla"`
-
-🏦 **Finance MCP** - Professional financial analysis.
-  "
